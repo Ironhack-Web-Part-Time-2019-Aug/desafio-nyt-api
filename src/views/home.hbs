@@ -1,0 +1,13 @@
+<form action="/search">
+    <input type="text" name="search">
+    <button type="submit">Enviar</button>
+</form>
+
+{{#each top }}
+<div>
+    {{#if multimedia.2.url}}
+    <img src="{{ multimedia.2.url }}" alt="">
+    {{/if}}
+    <a href="">{{ title }}</a>
+</div>
+{{/each}}
