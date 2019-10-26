@@ -1,9 +1,14 @@
 <div class="index-container">
     <form action="/search-results" method="GET">
-        <input type="text">
-        <input type="submit" value="Search" name="q">
+        <input type="text" name="q" value="">
+        <input type="submit" value="Submit">
     </form>
     <div>
-        
+        {{#each news}}
+            <p>{{this.section}}</p>
+            <a href="{{this.url}}">{{this.title}}</a>
+            <img src="{{this.thumbnail_standard}}" alt=""></p>
+            <p><a href="{{this.url}}"></a></p>
+        {{/each}}
     </div>
 </div>
