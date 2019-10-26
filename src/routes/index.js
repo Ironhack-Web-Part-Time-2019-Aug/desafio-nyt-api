@@ -18,7 +18,27 @@ const searchResults = (request, response) => {
       });
 };
 
+const mostPopular = (request, response) => {
+  fetch(`https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${process.env.NYT_ID}`)
+      .then((res) => res.json())
+      .then((json) => {
+        const result = json.results;
+        response.render('mostPopular', {result});
+      });
+};
+
+const mostShare = (request, response) =>{
+  fetch(`https://api.nytimes.com/svc/mostpopular/v2/emailed/1.json?api-key=${process.env.NYT_ID}`)
+      .then((res) => res.json())
+      .then((json) => {
+        const result = json.results;
+        response.render('mostPopularShared', {result});
+      });
+};
+
 module.exports = {
   home,
   searchResults,
+  mostPopular,
+  mostShare,
 };

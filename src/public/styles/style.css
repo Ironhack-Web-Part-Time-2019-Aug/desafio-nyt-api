@@ -1,9 +1,15 @@
 *{
     margin: 0%;
 }
-.header{
+nav {
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    margin-bottom: 50px;
+    background-color: gray;
+}
+.cards{
+    padding-top: 48px;
 }
 .mainIMG{
     width: 20%;
