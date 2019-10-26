@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+.main-news-card {
+  margin: 10px 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+.main-news-card-img{
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+}
+
+.news-card {
+  width: 230px;
+  height: 256px;
+  background-color: #ddd;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.news-card-content {
+  height: 50%;
+  padding: 8px;
+}
+
+.news-card-img {
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  border-radius: 4px 4px 0 0;
+}
+
+.warper {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

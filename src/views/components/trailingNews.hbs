@@ -1,0 +1,9 @@
+{{#each this}}
+<div class="news-card">
+  <div data-js-card-img="{{this.thumbnail_standard}}" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{this.thumbnail_standard}});"
+    class="news-card-img"></div>
+  <div class="news-card-content">
+    <h4>{{this.title}}</h4>
+  </div>
+</div>
+{{/each}}

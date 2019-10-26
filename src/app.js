@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
+const {root} =require('../constants');
 const fetch = require('node-fetch');
 const hbs = require('hbs');
 const port = 3000;
@@ -10,7 +11,7 @@ const app = express();
 hbs.registerPartials(`${__dirname}/views/components`);
 app.set('view engine', 'hbs');
 app.set('views', `${__dirname}/views`);
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${root}/public`));
 
 app.get('/', (req, res, next) => {
   fetch(
@@ -18,9 +19,10 @@ app.get('/', (req, res, next) => {
   )
       .then((res) => res.json())
       .then((body) => {
-        const firstTen = body.results.slice(0, 10);
-        console.log(firstTen[0]);
-        res.render('index', firstTen);
+        const firstNews = body.results[0];
+        const trailingNews = body.results.splice(1, 10);
+        console.log(trailingNews[0]);
+        res.render('index', {firstNews, trailingNews});
       });
 });
 
