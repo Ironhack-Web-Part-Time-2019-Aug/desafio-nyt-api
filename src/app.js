@@ -4,7 +4,6 @@ const express = require('express');
 const {root} =require('../constants');
 const fetch = require('node-fetch');
 const hbs = require('hbs');
-const port = 3000;
 const nytKey = process.env.NYT_CLIENT_KEY;
 const app = express();
 
@@ -63,6 +62,6 @@ app.get('/most-shared', (req, res, next) => {
       });
 });
 
-app.listen(`${port}`, () => {
-  console.log(`My NYT project is running on port ${port} 🗞  📰`);
+app.listen(`${process.env.PORT}`, () => {
+  console.log(`My NYT project is running on PORT ${process.env.PORT} 🗞  📰`);
 });
