@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="thumbnail">
+      {{#if this.multimedia.0.url}}
+        <div class = 'texts'> 
+            <h4>{{this.lead_paragraph}}</h4>
+        </div>
+        <img src="https://www.nytimes.com/{{this.multimedia.0.url}}" class="thumbnail-img">
+      {{/if}}
+  </div>

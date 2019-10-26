@@ -1,7 +1,10 @@
 *{
     margin: 0%;
 }
+.header{
+    display: flex;
+    justify-content: space-around;
+}
 .mainIMG{
-    margin: 0% 40%;
     width: 20%;
 }
