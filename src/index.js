@@ -19,4 +19,8 @@ app.get('/home', (req, res, next) => {
   res.render('index');
 });
 
+app.get('/search-results', (req, res, next) => {
+  res.render('search-results');
+});
+
 app.listen(3000);
