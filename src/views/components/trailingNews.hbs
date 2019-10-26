@@ -1,7 +1,17 @@
 {{#each this}}
 <div class="news-card">
-  <div data-js-card-img="{{this.thumbnail_standard}}" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{this.thumbnail_standard}});"
-    class="news-card-img"></div>
+  {{#if this.thumbnail_standard}}
+  <div data-js-card-img="{{this.thumbnail_standard}}"
+    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{this.thumbnail_standard}});"
+    class="news-card-img">
+  </div>
+  {{/if}}
+  {{#if this.media.0.media-metadata.1.url}}
+  <div data-js-card-img="{{this.media.0.media-metadata.1.url}}"
+    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{this.media.0.media-metadata.1.url}});"
+    class="news-card-img">
+  </div>
+  {{/if}}
   <div class="news-card-content">
     <h4>{{this.title}}</h4>
   </div>

@@ -45,9 +45,9 @@ app.get('/trending', (req, res, next) => {
       .then((res) => res.json())
       .then((body) => {
         const firstNews = body.results[0];
-        const trailing = body.results.splice(1, 10);
-        res.render('trending', {firstNews, trailing});
-        console.log(body.results);
+        const trailingNews = body.results.splice(1, 10);
+        res.render('trending', {firstNews, trailingNews});
+        console.log(firstNews.media[0]['media-metadata'][1].url);
       });
 });
 
@@ -58,8 +58,8 @@ app.get('/most-shared', (req, res, next) => {
       .then((res) => res.json())
       .then((body) => {
         const firstNews = body.results[0];
-        const trailing = body.results.splice(1, 10);
-        res.render('mostShared', {firstNews, trailing});
+        const trailingNews = body.results.splice(1, 10);
+        res.render('mostShared', {firstNews, trailingNews});
         console.log(body.results);
       });
 });

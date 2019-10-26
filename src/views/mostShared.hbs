@@ -1,6 +1,4 @@
-<h1>{{firstNews.title}}</h1>
-{{#each trailing}}
-{{this.title}}
-<br>
-<br>
-{{/each}}
+<div class="warper">
+{{>firstNews firstNews}}
+{{>trailingNews trailingNews}}
+</div>

@@ -1,6 +1,12 @@
 <div class="main-news-card">
+  {{#if this.thumbnail_standard}}
   <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{this.thumbnail_standard}});"
     class="main-news-card-img"></div>
+  {{/if}}
+  {{#if this.media.0.media-metadata.1.url}}
+  <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{this.media.0.media-metadata.1.url}});"
+    class="main-news-card-img"></div>
+  {{/if}}
   <h2>{{this.title}}</h2>
   <p>{{this.abstract}}</p>
 </div>
