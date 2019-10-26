@@ -11,8 +11,11 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-
 app.get('/', (req, res, next) => {
+  res.render('index');
+});
+
+app.get('/home', (req, res, next) => {
   res.render('index');
 });
 
