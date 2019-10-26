@@ -1,4 +1,5 @@
 {{#each this}}
+<a href="{{this.url}}" target="_blank">
 <div class="news-card">
   {{#if this.thumbnail_standard}}
   <div data-js-card-img="{{this.thumbnail_standard}}"
@@ -16,4 +17,5 @@
     <h4>{{this.title}}</h4>
   </div>
 </div>
+</a>
 {{/each}}

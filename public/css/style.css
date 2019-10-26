@@ -4,6 +4,11 @@ body {
 
 a {
   all: unset;
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: black solid 2px;
 }
 
 .author {
@@ -69,8 +74,15 @@ a {
   width: 230px;
   height: 256px;
   background-color: #ddd;
-  margin: 10px;
+  margin: 8px;
   border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.news-card:hover {
+  box-shadow: #d1d1d1 2px 4px;
+  width: 245px;
+  height: 270px;
 }
 
 .news-card-content {
