@@ -1,0 +1,8 @@
+<div id="trendings">
+  <h1>Trendings</h1>
+  {{#each news}}
+    <img src="{{this.imageUrl}}" alt="{{this.title}}">
+    <h2>{{this.title}}</h2>
+    <p>{{this.description}}</p>
+  {{/each}}
+</div>
