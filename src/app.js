@@ -36,6 +36,32 @@ app.get('/search-results', (req, res, next) => {
       });
 });
 
+app.get('/trending', (req, res, next) => {
+  fetch(
+      `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${nytKey}`,
+  )
+      .then((res) => res.json())
+      .then((body) => {
+        const firstNews = body.results[0];
+        const trailing = body.results.splice(1, 10);
+        res.render('trending', {firstNews, trailing});
+        console.log(body.results);
+      });
+});
+
+app.get('/most-shared', (req, res, next) => {
+  fetch(
+      `https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=${nytKey}`,
+  )
+      .then((res) => res.json())
+      .then((body) => {
+        const firstNews = body.results[0];
+        const trailing = body.results.splice(1, 10);
+        res.render('mostShared', {firstNews, trailing});
+        console.log(body.results);
+      });
+});
+
 app.listen(`${port}`, () => {
   console.log(`My NYT project is running on port ${port} 🗞  📰`);
 });
