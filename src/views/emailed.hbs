@@ -1,10 +1,15 @@
-<div class="card" >
+<div class="cards-container">
+{{#each top10}}  
+    {{!-- {{> newsPartial this}}     --}}
+    <div class="card" >
   {{!-- <img class="card-img" src="{{this.image_url}}"> --}}
   
   <div class="card-body">
-    <h2 class="card-title"><a href={{this.web_url}}>{{this.headline.main}}</a></h2>
+    <h2 class="card-title"><a href={{this.url}}>{{this.title}}</a></h2>
     {{!-- <span>{{this.tagline}}</span> --}}
     {{!-- <p class="card-text">{{this.description}}</p> --}}
   </div>
 
+</div>
+{{/each}}
 </div>

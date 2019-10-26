@@ -14,8 +14,9 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    
-    fetch('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=' + key)
+    // 'https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=yourkey'
+    // https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=
+    fetch('https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=' + key)
     .then(res => res.json())
     .then(json => {
         // let top10 = json.response.docs;
@@ -35,6 +36,32 @@ app.get('/search-results', (req, res) => {
     .then(json => {
         let top10 = json.response.docs;
         res.render('search-results',{top10});
+        // res.send(json);
+    });    
+});
+
+app.get('/most-viewed', (req, res) => {
+    
+    fetch('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=' + key)
+    .then(res => res.json())
+    .then(json => {
+        // let top10 = json.response.docs;
+        //res.render('index',{top10});
+        let top10 = json.results;
+        res.render('most-viewed',{top10});
+        // res.send({json});
+    });    
+});
+
+app.get('/emailed', (req, res) => {
+    
+    fetch('https://api.nytimes.com/svc/mostpopular/v2/emailed/1.json?api-key=' + key)
+    .then(res => res.json())
+    .then(json => {
+        // let top10 = json.response.docs;
+        //res.render('index',{top10});
+        let top10 = json.results;
+        res.render('emailed',{top10});
         // res.send({json});
     });    
 });
