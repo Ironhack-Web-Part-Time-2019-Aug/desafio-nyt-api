@@ -33,8 +33,7 @@ app.get('/search-results', (req, res, next) => {
   )
       .then((res) => res.json())
       .then((body) => {
-        res.render('searchResult', body.response.docs);
-        console.log(body.response.docs[0].multimedia[0].url);
+        res.render('searchResult', {coe: body.response.docs});
       });
 });
 

@@ -1,16 +1,16 @@
-{{#each this}}
-<a href="{{this.web_url}}">
-  <img src="https://static01.nyt.com/{{this.multimedia.0.url}}" alt="">
-{{this.headline.main}}
-<br>
-{{this.snippet}}
-<br>
-{{this.lead_paragraph}}
-<br>
-{{this.abstract}}
-<br>
-{{this.byline.original}}
-<br>
-<br>
-</a>
-{{/each}}
+<div class="results">
+  {{#each coe}}
+    <a href="{{this.web_url}}">
+  <div class="result-line">
+      <div class="content">
+        <h3>{{this.headline.main}}</h3>
+        <p>{{this.snippet}}</p>
+        <p class="author">{{this.byline.original}}</p>
+      </div>
+      <div class="result-thumbnail" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static01.nyt.com/{{this.multimedia.0.url}})">
+
+      </div>
+  </div>
+    </a>
+  {{/each}}
+</div>
