@@ -1,0 +1,16 @@
+{{#each this}}
+<a href="{{this.web_url}}">
+  <img src="https://static01.nyt.com/{{this.multimedia.0.url}}" alt="">
+{{this.headline.main}}
+<br>
+{{this.snippet}}
+<br>
+{{this.lead_paragraph}}
+<br>
+{{this.abstract}}
+<br>
+{{this.byline.original}}
+<br>
+<br>
+</a>
+{{/each}}
