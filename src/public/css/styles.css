@@ -55,3 +55,41 @@ footer {
 	bottom: 0;
 }
 
+#form-search-news
+{
+    background: rgb(221, 216, 216);
+    border-bottom: 1px solid #e2e2e2;
+    height: 36px;
+    padding: 8px 15px 3px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: nyt-franklin,helvetica,arial,sans-serif;
+    font-size: 11px;
+    
+    justify-content: space-around;
+
+    padding: 13px 20px 12px;
+    position: relative;
+}
+
+#form-search-news > form 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#form-search-news > form > input
+{
+    font-family: "Fira Mono", "Andale Mono", "Consolas", monospace;
+    font-size: 14px;
+    letter-spacing: 0px;
+    border: none;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 0;
+    width: 700px;
+    -webkit-appearance: none;
+}
