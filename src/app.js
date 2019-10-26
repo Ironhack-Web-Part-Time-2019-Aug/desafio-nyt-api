@@ -33,7 +33,7 @@ app.get('/search-results', (req, res, next) => {
   )
       .then((res) => res.json())
       .then((body) => {
-        res.render('searchResult', {coe: body.response.docs});
+        res.render('searchResult', {coe: body.response.docs, q: req.query.q});
       });
 });
 
