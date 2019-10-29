@@ -4,7 +4,7 @@ const app = express();
 const hbs = require(`hbs`);
 const viewsPath = __dirname + '/views';
 const {PORT} = process.env;
-const { router } = require(`./routes`);
+const {router} = require(`./routes`);
 
 app.use(express.static(`${__dirname}/public`));
 app.engine('hbs', require('hbs').__express);
