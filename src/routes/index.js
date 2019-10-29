@@ -14,7 +14,8 @@ const searchResults = (request, response) => {
       .then((res) => res.json())
       .then((json) => {
         const result = json.response.docs;
-        response.render('searchResults', {result});
+        const search = request.query.q;
+        response.render('searchResults', {result, search});
       });
 };
 

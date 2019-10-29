@@ -4,13 +4,68 @@
 nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     position: fixed;
-    margin-bottom: 50px;
-    background-color: gray;
+    background-color: #ebe7e7;
+    padding: 15px 80px;
+}
+.header a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
 }
 .cards{
-    padding-top: 48px;
+    padding-top: 95px;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+.cards h2{
+    text-align: center;
+    margin-bottom: 15px;
 }
 .mainIMG{
     width: 20%;
+}
+.notice input{
+    border: none;
+    background: #ebe7e7;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    color: black;
+}
+.notice button{
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 60px;
+    color: black;
+    font-weight: bold;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 50px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(182, 178, 178);
+}
+.texts a{
+    text-decoration: none;
+}
+.texts h4{
+    color: black;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.texts p{
+    color: gray;
+    text-align: center;
+    font-size: 18px;
+}
+.thumbnail-img{
+    margin-left: 5%;
+    width: 350px;
+    height: 250px;
 }
