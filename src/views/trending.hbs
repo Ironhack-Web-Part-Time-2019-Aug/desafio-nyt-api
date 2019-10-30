@@ -1,8 +1,8 @@
 {{#each trending }}
 <div>
-    {{#if this.media.0.media-metadata.2.ur}}
-    <img src="{{ this.media.0.media-metadata.2.url }}" alt="">
-    {{/if}}
-    <a href="">{{ title }}</a>
+    {{!-- {{#if media.0.media-metadata.2.ur}} --}}
+    <img src="{{ media.0.media-metadata.2.url }}" alt="">
+    {{!-- {{/if}} --}}
+    <a href="{{ url }}">{{ title }}</a>
 </div>
 {{/each}}

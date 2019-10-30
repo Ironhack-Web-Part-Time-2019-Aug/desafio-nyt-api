@@ -1,13 +1,13 @@
-<form action="/search">
-    <input type="text" name="search">
-    <button type="submit">Enviar</button>
+<form class="pesquisa" action="/search">
+    <input class = "formItens" type="text" name="search">
+    <a class="buttonSearch" type="submit">Enviar</a>
 </form>
 
 {{#each top }}
 <div>
-    {{#if multimedia.2.url}}
-    <img src="{{ multimedia.2.url }}" alt="">
+    {{#if multimedia.1.url}}
+    <img src="{{ multimedia.1.url }}" href="{{url}}" alt="{{url}}">
     {{/if}}
-    <a href="">{{ title }}</a>
+    <a href="{{url}}">{{ title }}</a>
 </div>
 {{/each}}

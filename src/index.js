@@ -22,7 +22,7 @@ app.get('/', (request, response, next) => {
   fetch(`https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=${ny}`)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json.results.slice(0, 10)[0].multimedia[0].url);
+        console.log(json.results.slice(0, 10)[0].url);
         const top = json.results.slice(0, 10);
         response.render('home', {top});
       });
@@ -35,7 +35,7 @@ app.get('/search', (request, response, next) => {
   fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${search}&api-key=${ny}`)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        console.log(json.response.docs[0].web_url);
         const title = json.response.docs;
         response.render('search', {title});
       });
@@ -45,7 +45,7 @@ app.get('/trending', (request, response, next) => {
   fetch(`https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${ny}`)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json.results[0].media[0]['media-metadata'][0].url);
+        console.log(json.results[0]);
         const trending = json.results;
         response.render('trending', {trending});
       });
