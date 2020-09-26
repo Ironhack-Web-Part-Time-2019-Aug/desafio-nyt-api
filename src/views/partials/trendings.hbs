@@ -1,0 +1,17 @@
+<div id="news">
+  {{#each news}}
+  <div class="news {{#if @first}} first{{/if}}">
+    <div class="thumbnail {{#if imageUrl}}no-thumb{{/if}}">
+    {{#if imageUrl}}
+      <img src="{{this.imageUrl}}" alt="{{this.title}}">
+    {{/if}}
+    </div>
+    <div class="news-text">
+      <span>{{this.section}}</span>
+      <h2><a href="{{this.url}}">{{this.title}}</a></h2>
+      <p>{{this.description}}</p>
+    </div>
+    <div class="news-date">Oct. 18</div>
+  </div>
+  {{/each}}
+</div>

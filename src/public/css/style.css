@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding : 5px 10px;
+  color: #444;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+#logo {
+  width : 200px;
+}
+
+#formBusca {
+  display: flex;
+  padding: 40px;
+  background : #f7f7f7;
+}
+
+#formBusca input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 2.125rem;
+}
+
+#formBusca input:hover {
+  border-bottom: 1px solid #eee;
+}
+
+/* Container */
+.container {
+  width : 840px;
+  margin : auto;
+}
+
+.container h1 {
+  margin : 50px auto;
+}
+
+/* news */
+.news {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.news a {
+  text-decoration: none;
+  color: #444;
+}
+
+.news .thumbnail {
+  width: 165px;
+}
+
+.news .thumbnail img {
+  width: 205px;
+  height: 136px;
+}
+
+.news .news-text {
+  width: 500px;
+}
+
+.news h2 {
+  font-size: 23px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.news p {
+  font-size: 11pt;
+  font-weight: 100;
+  line-height: 1.3em;
+}
+
+.news span {
+  text-transform: uppercase;
+  font-size: 8pt;
+  font-weight: 100;
+  color: #333;
+}
+
+.news .news-date {
+  min-width: 125px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #aaa;
+}
